@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="am">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,30 +10,35 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="topbar">
+    <div class="logo-mark" aria-hidden="true">R</div>
+    <button id="lang-toggle" class="lang-btn" aria-label="Switch language">English</button>
+  </div>
+
   <header class="hero">
     <div class="container hero__content">
       <div class="hero__text">
-        <p class="eyebrow">Addis Ababa · Community Rides</p>
-        <h1>Share the ride, beat the rush.</h1>
-        <p class="lede">Ride Share Eth connects commuters heading the same way so everyone travels faster and more affordably. Post your route, accept bids, and split fuel costs—not profits.</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">አዲስ አበባ · የማህበረሰብ ጉዞዎች</p>
+        <h1 data-i18n="hero.title">ጉዞውን ያካፍሉ፣ በርካሽ በፍጥነት ይድረሱ።</h1>
+        <p class="lede" data-i18n="hero.lede">Ride Share Eth በተመሳሳይ አቅጣጫ የሚጓዙ ጎዳና ተጓዦችን ያገናኛል፣ ጉዞዎችን በቀላሉ ለመካፈል ያግዛል። መንገድዎን ይለጥፉ፣ ጨረታዎችን ይቀበሉ፣ ነዳጅን ብቻ ይካፈሉ።</p>
         <div class="hero__actions">
-          <button class="btn btn--primary">Post a ride</button>
-          <button class="btn btn--ghost">Browse rides</button>
+          <button class="btn btn--primary" data-i18n="cta.postRide">ጉዞ ይለጥፉ</button>
+          <button class="btn btn--ghost" data-i18n="cta.browseRides">ጉዞዎችን ይመልከቱ</button>
         </div>
         <div class="hero__meta">
-          <span>Avg price: 60–70 birr per trip</span>
-          <span>Based on birr-per-kilometer pricing</span>
+          <span data-i18n="hero.meta1">አማካይ ዋጋ፡ 60–70 ብር በጉዞ</span>
+          <span data-i18n="hero.meta2">በብር/ኪ.ሜ የሚታወቅ ዋጋ</span>
         </div>
       </div>
       <div class="hero__panel">
         <div class="panel__header">
-          <p>Next leaving soon</p>
-          <span class="pill pill--success">Live</span>
+          <p data-i18n="panel.label">በቀጥታ የሚሄዱ</p>
+          <span class="pill pill--success" data-i18n="panel.live">በቀጥታ</span>
         </div>
         <div class="ride-card featured" id="featured-ride"></div>
         <div class="hero__legend">
-          <span class="dot dot--primary"></span> Driver-rated &amp; verified
-          <span class="dot dot--muted"></span> Passenger transparency
+          <span class="dot dot--primary"></span> <span data-i18n="legend.driver">የተቆጣጠሩ አሽከርካሪዎች</span>
+          <span class="dot dot--muted"></span> <span data-i18n="legend.passenger">ግልጽ የተሳፋሪ መረጃ</span>
         </div>
       </div>
     </div>
@@ -43,30 +48,30 @@
     <section class="section section--light">
       <div class="container section__grid">
         <div>
-          <p class="eyebrow">Why Ride Share Eth</p>
-          <h2>Built for the way Addis moves</h2>
-          <p class="body">Anbessa and Sheger buses fill up early, blue minibuses cost more, and private cabs stretch budgets. Ride Share Eth matches drivers already on the road with riders nearby so trips stay affordable.</p>
+          <p class="eyebrow" data-i18n="why.eyebrow">ለምን Ride Share Eth</p>
+          <h2 data-i18n="why.title">በአዲስ አበባ እንደሚንቀሳቀስ ተስማሚ</h2>
+          <p class="body" data-i18n="why.body">የአንበሳና ሸገር አውቶቡሶች በፍጥነት ይሞላሉ፣ ሰማያዊ ሚኒበሶች ብዙ ይከፍላሉ፣ የግል ታክሲዎች በጀትን ይጭናሉ። Ride Share Eth በመንገድ ላይ ያሉ አሽከርካሪዎችን ከቅርብ ተሳፋሪዎች ጋር ያገናኛል እንዲሁም ጉዞዎች በርካሽ ይቆያሉ።</p>
           <ul class="list">
-            <li>Post your route 20–30 minutes before departure.</li>
-            <li>Riders bid for seats along the way—Bole Bulbula to Megenagna and beyond.</li>
-            <li>Transparent feedback: drivers and passengers see each other's ratings.</li>
-            <li>Pricing that makes sense: birr-per-kilometer, usually 60–70 birr for popular corridors.</li>
+            <li data-i18n="why.list1">መንገድዎን በመነሻው 20–30 ደቂቃ በፊት ይለጥፉ።</li>
+            <li data-i18n="why.list2">ተሳፋሪዎች በመካከለኛ ጣቢያዎች ጨረታ ያቀርባሉ—ከቦሌ ቡልቡላ እስከ መገናኛ ድረስ።</li>
+            <li data-i18n="why.list3">ግልጽ ግብረመልስ፡ አሽከርካሪና ተሳፋሪ የእርስዎን ደረጃ ያያሉ።</li>
+            <li data-i18n="why.list4">ዋጋ በብር/ኪ.ሜ የሚቆጠር፣ በተለምዶ አገር የሚጠቀሱ መንገዶች 60–70 ብር ይሆናሉ።</li>
           </ul>
         </div>
         <div class="card metrics">
           <div class="metric">
-            <p class="metric__label">Avg rider savings vs. private cab</p>
+            <p class="metric__label" data-i18n="metrics.savingsLabel">ከግል ታክሲ ጋር የተያያዘ አማካይ ቅናሽ</p>
             <p class="metric__value">3.5x</p>
           </div>
           <div class="metric">
-            <p class="metric__label">Routes covered today</p>
+            <p class="metric__label" data-i18n="metrics.routesLabel">ዛሬ የተሳፉ መንገዶች</p>
             <p class="metric__value" id="metric-routes">0</p>
           </div>
           <div class="metric">
-            <p class="metric__label">Trusted drivers</p>
+            <p class="metric__label" data-i18n="metrics.driversLabel">የተታመኑ አሽከርካሪዎች</p>
             <p class="metric__value" id="metric-drivers">0</p>
           </div>
-          <div class="badge">Community-first · Fuel-cost sharing</div>
+          <div class="badge" data-i18n="metrics.badge">ማህበረሰብ በመጀመሪያ · የነዳጅ ክፍያ አጋር</div>
         </div>
       </div>
     </section>
@@ -75,33 +80,33 @@
       <div class="container">
         <div class="section__header">
           <div>
-            <p class="eyebrow">Live rides</p>
-            <h2>Find a ride that matches your path</h2>
+            <p class="eyebrow" data-i18n="rides.eyebrow">በቀጥታ ጉዞዎች</p>
+            <h2 data-i18n="rides.title">ከአንተ ጋር የሚጣጣሙ ጉዞዎችን ያግኙ</h2>
           </div>
           <div class="controls">
-            <input type="search" id="search" placeholder="Search by area, stop, or driver..." aria-label="Search rides">
+            <input type="search" id="search" data-i18n-placeholder="rides.searchPlaceholder" placeholder="እባክዎ የአካባቢ ስም ያስገቡ..." aria-label="Search rides">
             <select id="sort" aria-label="Sort rides">
-              <option value="recent">Most recent</option>
-              <option value="price">Lowest price</option>
-              <option value="rating">Top rated</option>
+              <option value="recent" data-i18n-option="rides.sortRecent">በቅርብ ጊዜ የተጨመረ</option>
+              <option value="price" data-i18n-option="rides.sortPrice">ዝቅተኛ ዋጋ</option>
+              <option value="rating" data-i18n-option="rides.sortRating">ከፍተኛ ደረጃ</option>
             </select>
           </div>
         </div>
         <div class="filters">
           <div class="filter">
-            <label for="departure">From</label>
-            <input id="departure" type="text" placeholder="e.g., Bole Bulbula">
+            <label for="departure" data-i18n="rides.fromLabel">ከየት</label>
+            <input id="departure" type="text" data-i18n-placeholder="rides.fromPlaceholder" placeholder="ለምሳሌ፣ ቦሌ ቡልቡላ">
           </div>
           <div class="filter">
-            <label for="destination">To</label>
-            <input id="destination" type="text" placeholder="e.g., Megenagna">
+            <label for="destination" data-i18n="rides.toLabel">ወዴት</label>
+            <input id="destination" type="text" data-i18n-placeholder="rides.toPlaceholder" placeholder="ለምሳሌ፣ መገናኛ">
           </div>
           <div class="filter">
-            <label for="timeWindow">Leaving</label>
+            <label for="timeWindow" data-i18n="rides.timeLabel">መነሻ ጊዜ</label>
             <select id="timeWindow">
-              <option value="any">Anytime today</option>
-              <option value="soon">Within 30 minutes</option>
-              <option value="hour">Within an hour</option>
+              <option value="any" data-i18n-option="rides.timeAny">በዛሬ ቀን ሁሉም</option>
+              <option value="soon" data-i18n-option="rides.timeSoon">በ30 ደቂቃ ውስጥ</option>
+              <option value="hour" data-i18n-option="rides.timeHour">በ1 ሰዓት ውስጥ</option>
             </select>
           </div>
         </div>
@@ -112,19 +117,19 @@
     <section class="section section--muted">
       <div class="container trust">
         <div>
-          <p class="eyebrow">Trust &amp; safety</p>
-          <h2>Know who you ride with</h2>
-          <p class="body">Driver cards show car model, rating, and rider feedback. Passengers bidding on seats also share their track record so everyone feels confident sharing a ride.</p>
+          <p class="eyebrow" data-i18n="trust.eyebrow">የእርግጠኝነት እና ደህንነት</p>
+          <h2 data-i18n="trust.title">ከማን ጋር እንደምትጓዙ ይወቁ</h2>
+          <p class="body" data-i18n="trust.body">የአሽከርካሪ ካርድ የመኪና ሞዴል፣ ደረጃ፣ እና የተሳፋሪ ግብረመልሶችን ያሳያል። ጨረታ የሚያቀርቡ ተሳፋሪዎችም ያለፉትን ደረጃ ይካፈላሉ ስለዚህ ሁሉም እርግጠኛ ይሆናሉ።</p>
           <div class="pill-group">
-            <span class="pill pill--success">Driver verified</span>
-            <span class="pill pill--soft">Passenger rating visible</span>
-            <span class="pill pill--ghost">Feedback history</span>
+            <span class="pill pill--success" data-i18n="trust.pill1">አሽከርካሪ የተረጋገጠ</span>
+            <span class="pill pill--soft" data-i18n="trust.pill2">የተሳፋሪ ደረጃ ይታያል</span>
+            <span class="pill pill--ghost" data-i18n="trust.pill3">የግብረመልስ ታሪክ</span>
           </div>
         </div>
         <div class="card feedback">
           <div class="feedback__header">
             <div>
-              <p class="feedback__title">Featured driver</p>
+              <p class="feedback__title" data-i18n="trust.feedbackTitle">ተጠቃሚ አሽከርካሪ</p>
               <h3 id="feedback-driver">-</h3>
               <p class="muted" id="feedback-car">-</p>
             </div>
@@ -140,27 +145,27 @@
     <div class="container footer__grid">
       <div>
         <h4>Ride Share Eth</h4>
-        <p class="muted">Smart, community-driven rides across Addis. Pay only for the kilometers you share.</p>
+        <p class="muted" data-i18n="footer.about">ብልህ፣ የማህበረሰብ ጉዞዎች በአዲስ። የምትካፈሉትን ኪ.ሜ ብቻ ይክፈሉ።</p>
       </div>
       <div>
-        <h5>Popular corridors</h5>
+        <h5 data-i18n="footer.corridors">ታዋቂ መንገዶች</h5>
         <ul class="mini-list">
-          <li>Bole Bulbula → Megenagna</li>
-          <li>Piassa → CMC</li>
-          <li>Jemo → Mexico → 4 Kilo</li>
+          <li data-i18n="footer.route1">ቦሌ ቡልቡላ → መገናኛ</li>
+          <li data-i18n="footer.route2">ፒያሳ → ሲኤምሲ</li>
+          <li data-i18n="footer.route3">ጀሞ → ሜክሲኮ → 4 ኪሎ</li>
         </ul>
       </div>
       <div>
-        <h5>Costs at a glance</h5>
+        <h5 data-i18n="footer.costs">የዋጋ መረጃ</h5>
         <ul class="mini-list">
-          <li>Anbessa/Sheger: ~20 birr</li>
-          <li>Blue minibus: ~40 birr</li>
-          <li>Private cab: ~230 birr</li>
-          <li>Ride Share Eth: ~60–70 birr</li>
+          <li data-i18n="footer.cost1">አንበሳ/ሸገር፡ ~20 ብር</li>
+          <li data-i18n="footer.cost2">ሰማያዊ ሚኒበስ፡ ~40 ብር</li>
+          <li data-i18n="footer.cost3">የግል ታክሲ፡ ~230 ብር</li>
+          <li data-i18n="footer.cost4">Ride Share Eth፡ ~60–70 ብር</li>
         </ul>
       </div>
     </div>
-    <p class="footer__note">Built in Addis for Addis. Fuel-cost sharing, not profiteering.</p>
+    <p class="footer__note" data-i18n="footer.note">በአዲስ የተገነባ፣ ለአዲስ። የነዳጅ ክፍያ እንጂ የትርፍ መሆን አይደለም።</p>
   </footer>
 
   <script src="script.js"></script>

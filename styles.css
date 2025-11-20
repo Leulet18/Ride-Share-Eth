@@ -25,6 +25,51 @@ body {
   line-height: 1.6;
 }
 
+.topbar {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  z-index: 10;
+}
+
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  color: #1f140c;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-size: 0.95rem;
+}
+
+.lang-btn {
+  border: 1px solid var(--border);
+  background: rgba(31, 20, 12, 0.04);
+  color: var(--heading);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.lang-btn:hover {
+  transform: translateY(-1px);
+  background: rgba(216, 137, 69, 0.16);
+  box-shadow: var(--shadow);
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   color: var(--heading);
@@ -41,7 +86,7 @@ p {
 }
 
 .hero {
-  padding: 64px 0 32px;
+  padding: 96px 0 32px;
 }
 
 .hero__content {
