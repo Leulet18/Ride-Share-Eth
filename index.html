@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ride Share Eth | Addis Ababa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero__content">
+      <div class="hero__text">
+        <p class="eyebrow">Addis Ababa · Community Rides</p>
+        <h1>Share the ride, beat the rush.</h1>
+        <p class="lede">Ride Share Eth connects commuters heading the same way so everyone travels faster and more affordably. Post your route, accept bids, and split fuel costs—not profits.</p>
+        <div class="hero__actions">
+          <button class="btn btn--primary">Post a ride</button>
+          <button class="btn btn--ghost">Browse rides</button>
+        </div>
+        <div class="hero__meta">
+          <span>Avg price: 60–70 birr per trip</span>
+          <span>Based on birr-per-kilometer pricing</span>
+        </div>
+      </div>
+      <div class="hero__panel">
+        <div class="panel__header">
+          <p>Next leaving soon</p>
+          <span class="pill pill--success">Live</span>
+        </div>
+        <div class="ride-card featured" id="featured-ride"></div>
+        <div class="hero__legend">
+          <span class="dot dot--primary"></span> Driver-rated &amp; verified
+          <span class="dot dot--muted"></span> Passenger transparency
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--light">
+      <div class="container section__grid">
+        <div>
+          <p class="eyebrow">Why Ride Share Eth</p>
+          <h2>Built for the way Addis moves</h2>
+          <p class="body">Anbessa and Sheger buses fill up early, blue minibuses cost more, and private cabs stretch budgets. Ride Share Eth matches drivers already on the road with riders nearby so trips stay affordable.</p>
+          <ul class="list">
+            <li>Post your route 20–30 minutes before departure.</li>
+            <li>Riders bid for seats along the way—Bole Bulbula to Megenagna and beyond.</li>
+            <li>Transparent feedback: drivers and passengers see each other's ratings.</li>
+            <li>Pricing that makes sense: birr-per-kilometer, usually 60–70 birr for popular corridors.</li>
+          </ul>
+        </div>
+        <div class="card metrics">
+          <div class="metric">
+            <p class="metric__label">Avg rider savings vs. private cab</p>
+            <p class="metric__value">3.5x</p>
+          </div>
+          <div class="metric">
+            <p class="metric__label">Routes covered today</p>
+            <p class="metric__value" id="metric-routes">0</p>
+          </div>
+          <div class="metric">
+            <p class="metric__label">Trusted drivers</p>
+            <p class="metric__value" id="metric-drivers">0</p>
+          </div>
+          <div class="badge">Community-first · Fuel-cost sharing</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <p class="eyebrow">Live rides</p>
+            <h2>Find a ride that matches your path</h2>
+          </div>
+          <div class="controls">
+            <input type="search" id="search" placeholder="Search by area, stop, or driver..." aria-label="Search rides">
+            <select id="sort" aria-label="Sort rides">
+              <option value="recent">Most recent</option>
+              <option value="price">Lowest price</option>
+              <option value="rating">Top rated</option>
+            </select>
+          </div>
+        </div>
+        <div class="filters">
+          <div class="filter">
+            <label for="departure">From</label>
+            <input id="departure" type="text" placeholder="e.g., Bole Bulbula">
+          </div>
+          <div class="filter">
+            <label for="destination">To</label>
+            <input id="destination" type="text" placeholder="e.g., Megenagna">
+          </div>
+          <div class="filter">
+            <label for="timeWindow">Leaving</label>
+            <select id="timeWindow">
+              <option value="any">Anytime today</option>
+              <option value="soon">Within 30 minutes</option>
+              <option value="hour">Within an hour</option>
+            </select>
+          </div>
+        </div>
+        <div class="rides" id="rides"></div>
+      </div>
+    </section>
+
+    <section class="section section--muted">
+      <div class="container trust">
+        <div>
+          <p class="eyebrow">Trust &amp; safety</p>
+          <h2>Know who you ride with</h2>
+          <p class="body">Driver cards show car model, rating, and rider feedback. Passengers bidding on seats also share their track record so everyone feels confident sharing a ride.</p>
+          <div class="pill-group">
+            <span class="pill pill--success">Driver verified</span>
+            <span class="pill pill--soft">Passenger rating visible</span>
+            <span class="pill pill--ghost">Feedback history</span>
+          </div>
+        </div>
+        <div class="card feedback">
+          <div class="feedback__header">
+            <div>
+              <p class="feedback__title">Featured driver</p>
+              <h3 id="feedback-driver">-</h3>
+              <p class="muted" id="feedback-car">-</p>
+            </div>
+            <div class="rating" id="feedback-rating"></div>
+          </div>
+          <div class="feedback__body" id="feedback-text"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <h4>Ride Share Eth</h4>
+        <p class="muted">Smart, community-driven rides across Addis. Pay only for the kilometers you share.</p>
+      </div>
+      <div>
+        <h5>Popular corridors</h5>
+        <ul class="mini-list">
+          <li>Bole Bulbula → Megenagna</li>
+          <li>Piassa → CMC</li>
+          <li>Jemo → Mexico → 4 Kilo</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Costs at a glance</h5>
+        <ul class="mini-list">
+          <li>Anbessa/Sheger: ~20 birr</li>
+          <li>Blue minibus: ~40 birr</li>
+          <li>Private cab: ~230 birr</li>
+          <li>Ride Share Eth: ~60–70 birr</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__note">Built in Addis for Addis. Fuel-cost sharing, not profiteering.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
